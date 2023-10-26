@@ -10,6 +10,12 @@ pipeline {
         stage('Test'){
             steps{
                 echo "Get it docker container and test if python is available"
+                sh "py helloworld.py"
+            }
+        }
+        stage('see if i can run docker command'){
+            steps{
+                sh "docke ps"
             }
         }
     }
