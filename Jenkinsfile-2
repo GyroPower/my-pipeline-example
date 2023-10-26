@@ -2,11 +2,15 @@ pipeline {
     agent any
     stages {
         stage('Build docker container') {
-            echo "running docker container"
+            steps{
+                echo "running docker container"
+            }
         }
 
         stage('Test'){
-            echo "Get it docker container and test if python is available"
+            steps{
+                echo "Get it docker container and test if python is available"
+            }
         }
     }
 }
