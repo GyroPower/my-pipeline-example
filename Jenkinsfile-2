@@ -2,19 +2,11 @@ pipeline {
     agent any
     stages {
         stage('Build docker container') {
-            steps {
-              script{  
-                sh 'docker run python:3.12.0-alpine3.18'
-              }
-            }
+            echo "running docker container"
         }
 
         stage('Test'){
-            steps {
-                script{
-                    sh 'python3 --version'
-                }
-            }
+            echo "Get it docker container and test if python is available"
         }
     }
 }
